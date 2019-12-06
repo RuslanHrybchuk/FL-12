@@ -1,0 +1,270 @@
+/*
+
+write your code here
+
+*/
+
+@media print {
+	
+	#home{
+		margin-top: -120px;
+		padding-top: 0px;
+	}
+	
+	.tm-main-nav{
+		display: none;
+	}
+	
+	.tm-team-img{
+		display: none;
+	}
+	
+	.gallery-container{
+		display: none;
+	}
+	
+	section .tm-content-box{
+		margin-top: -30px;
+	}
+	
+	section.tm-content-box{
+		display: none;
+	}
+	
+	section.heading{
+		display: block;
+		margin-top: -60px;
+		width: 60%;
+		margin-left: 20%;
+	}
+	
+	section.heading h2{
+		margin-left: 10%;
+		font-weight: 300;
+	}
+	
+	.blocks .tm-team-description-container{
+		min-width: 90%;
+		text-align: center;
+		margin-top: -80px;
+		margin-bottom: 100px;
+		padding: 0;
+	}
+	
+	.blocks .tm-team-description-container h2{
+		margin-left: 40%;
+	}
+	
+	section.heading ol{
+		list-style-type: none;
+	}
+	
+	section.heading ol li:nth-of-type(2n+1){
+		text-align: right;
+		margin-bottom: 20px;
+	}
+	
+	section.heading ol li:nth-child(2n){
+		float: left;
+		margin-top: -20px;
+	}
+	
+	#about{
+		display: none;
+	}
+	
+	section::before{
+		display: none;
+	}
+	
+	.tm-team-description-container {
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	section:nth-child(2) .tm-team-description-container {
+		text-align: center;
+		margin: 0 auto;
+		padding: 0;
+		min-width: 100%;
+	}
+	
+	.heading li:nth-child(1)::after, .heading li:nth-child(3)::after{
+		display: none;
+	}
+
+
+	#ideas{
+		margin-top: -80px;
+		
+	}
+	
+	.carousel {
+		padding-top: 0px;
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+	}
+	
+	#ideas ol{
+		display: none;
+	}
+
+}
+
+
+
+
+.tm-nav-item-link:hover{
+	background: lightskyblue ;
+	color: #fff;
+}
+
+.tm-banner{
+	background: linear-gradient(to right, lightskyblue, burlywood );  
+}
+
+.tm-banner-inner{
+	background: #fff; 
+}
+
+.tm-banner-text{
+	position: relative;
+	text-shadow: 4px 3px 3px #333;
+	animation: anime 4s;
+	animation-timing-function: ease-out;
+}
+
+@keyframes anime {
+  from {left: 200px;}
+  to {left: 0px;}
+}
+
+
+.tm-main-nav, .tm-content-header, section {
+	box-shadow: 0 0 10px rgba(61, 55, 61, 0.7);
+}
+
+.blocks .tm-content-box{
+	box-shadow:none;
+}
+
+.tm-team-img{
+	position: relative;
+	float: right;
+	margin-top: 0px;
+}
+
+.flex-2-col > .tm-team-description-container{
+	margin-top: 195px;
+	float: left;
+	width: 360px;
+}
+
+
+.tm-team-description-container > h2{
+	text-align: center;
+}
+
+.tm-section-description {
+	text-indent: 25px;
+	line-height: 30px;
+}
+
+
+li.box-bg:hover{
+	background: lightgrey;
+}
+
+li.box-bg:hover h2{
+	color: lightskyblue;
+	font-style: italic;
+}
+
+.heading h2{
+	text-align: center;
+	color: lightskyblue;
+}
+
+.heading ol{
+	list-style-type: lower-alpha;
+}
+
+.heading li:hover::before{
+	content: '>';
+}
+
+.heading li:nth-child(1)::after, .heading li:nth-child(3)::after{
+	content: 'New';
+	color: red;
+	vertical-align: super;
+	font-size: 11px;
+	font-weight: bold;
+	font-variant: small-caps;
+}
+
+.blocks h2.tm-section-title{
+	text-align: left;
+}
+
+.blocks p:nth-child(3){
+	word-spacing: 10px;
+	letter-spacing: 5px;
+	font-style: italic;
+}
+
+.blocks .boxes li{
+	padding: 10px;
+}
+
+.blocks .boxes p{
+	font-style: italic;
+}
+
+.blocks .boxes p::first-letter{
+	font-weight: bold;
+}
+
+.blocks .boxes li:nth-child(2n-1){
+	background: lightskyblue;
+	color: #fff;
+}
+
+#contact_name, #contact_subject, #contact_email {
+	border-bottom: 1px solid lightskyblue;
+}
+
+#contact_name:focus, #contact_subject:focus, #contact_email:focus {
+	background: lightskyblue;
+}
+
+#contact_message{
+	border: 1px solid lightskyblue;
+	background-image: url('../img/email-icon.png');
+	background-position: 990px 190px;
+	background-size: 30px 30px;
+    background-repeat: no-repeat;
+}
+
+.submit-btn{
+	border: 1px solid lightskyblue;
+	background: #fff;
+	width: 100px;
+	padding: 15px;
+	float: right;
+	color: lightskyblue;
+}
+
+section::before{
+	content: "";
+	border-top: 45px solid lightskyblue;
+    border-right: 45px solid transparent;
+}
+
+
+
+
+
+
+
+
+
