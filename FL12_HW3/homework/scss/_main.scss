@@ -1,0 +1,307 @@
+
+
+@mixin bg($image){
+        background: $image center center no-repeat;
+        border-radius: 0% 0% 40% 50% / 100% 60% 40% 0% ;
+        background-size: cover;
+}
+
+@mixin text($color, $size, $weight, $line_height, $font) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line_height;
+    font-family: $font;
+}
+
+@mixin card{
+    width: 56%;
+    height: 200px;
+    background: $card_color;
+    float: left;
+    margin: 0 0 1.5% 21%;
+    border-radius: 7px ;
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin button ($color){
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    background:$color;
+    border: none;
+    border-radius: 5%;
+    @include text(#f2f3e7, 13px, bold, normal, $hind);
+}
+
+@mixin card_link {
+    @include text(#AFB3C0, 12px, normal, normal, $hind);
+    margin: 0 0 0 155px;
+    text-align: center;
+}
+
+@mixin header_link {
+    margin-left: 23%;
+    @include text(#f2f3e7, 15px, 500, normal, $sans);
+    letter-spacing: -0.5px;
+}
+
+
+$margin: (
+    "0": 0 0 0 0,
+    "50": 50px 50px 50px 50px, 
+    "100": 100px 100px 100px 100px,
+    );
+
+
+body {
+    margin: map-get($margin, "0");        
+
+    padding-bottom: 0;
+    background: $mainBG;
+
+    .header{
+    width: $full;
+    height: 76vh;   
+    @include bg($hills);
+
+        .header-wrap{
+            width: 35%;
+            height: 100%;
+            margin-left: 10%;
+            float: left;
+
+            .landing-logo{
+                display: flex;
+
+                img{
+                    width: 30px;
+                    height: 30px;
+                    margin-top: 20px; 
+                }
+
+                p{
+                    margin: 23px 0 0 10px;
+                    font-family: $delusional;
+                    display: flex;
+                    flex-direction: column;
+                    font-weight: 700;
+                    color: $gtext;
+                    line-height: 15px;
+
+                    span{
+                        font-weight: normal;
+                        font-size: 7px;
+                        text-align: center;
+                    }
+                } 
+            }
+
+            .header_heading{
+                @include text($gtext, 50px, bold, 50px, $sans);
+                margin: 45px 0 25px 0;
+                position: relative;
+                z-index: 2;
+                
+                &::after{
+                    content:"";
+                    position: absolute;
+                    background-color: $pseudo;
+                    top: 65px;
+                    left: 0px;
+                    height: 35px;
+                    width: 210px;
+                    z-index: -1;
+                }
+            }
+
+            .header_text{
+
+                @include text($gtext, 11px, normal, 17px, $delusional);
+
+                white-space: pre-line;
+            }
+
+            p + div{
+                margin: 45px 0 0 0;
+
+                .header_button{
+                @include button($button_color);
+                }
+
+                a{
+                    @include header_link;
+                }
+
+            }
+        }
+    }
+
+    main {
+
+        margin-top: -7px;
+
+        .section_card_wrap{
+
+            display: flex;
+            flex-direction: column;
+        }
+        .section_text{
+            @include text($gtext, 30px, 600, normal, $sans);
+            text-align: center;
+            position: relative;
+            z-index: 2;
+
+            &::after{
+                content:"";
+                position: absolute;
+                background-color: $pseudo;
+                top: -2px;
+                left: 680px;
+                height: 35px;
+                width: 135px;
+                z-index: -1;
+            }
+    
+        }
+
+        .section_card {
+            @include card();
+
+            img{
+                width: 40%;
+                border-radius: 5px;
+            }
+
+            
+            .section_card_right_container{
+                margin: 17px 0% 2% 5%;
+                width: 50%;
+                height: 90%;
+                .section_card_heading{
+                    @include text(#fff, 17px, 600, normal, $sans);
+                    text-align: center;
+                }
+
+                .section_card_text{
+                    @include text($card_text_colour, 12px, normal, normal, $delusional);
+                    margin: 25px 0 10px 30px;
+                    height: 70px; 
+                    width: 320px;
+                    line-height: 145%;
+                }
+                .section_link{
+                    @include card_link;  
+                }
+            }
+        }
+
+        .section_banner{
+            box-sizing: border-box;
+            width: 62.5%;
+            height: 100px;
+            float: left;
+            margin: 6% 0 0 18.7%;
+            padding: 20px 115px 12px 115px ;
+            background: linear-gradient(to right, $gradient_color1, $gradient_color2);
+            display: flex;
+            flex-direction: row;
+            border-radius: 5px;
+            z-index: 2;
+
+
+            .section_banner_text_wrap{
+                .section_banner_heading{
+                @include text($gtext, 21px, bold, normal, $sans);
+                margin: 0 0 0 0;
+                position: relative;
+                z-index: 3;
+
+                &::after{
+                    content:"";
+                    position: absolute;
+                    background-color: $pseudo;
+                    top: -7px;
+                    left: 83px;
+                    height: 35px;
+                    width: 45px;
+                    z-index: -1;
+                }
+                }
+
+                .section_banner_text{
+                @include text(#bbc3ce, 11px, normal, normal, $delusional);
+                width: 300px;
+                }
+            }
+            .section_banner_button{
+                @include button($button_color);
+                margin: 12px 0 0 200px;
+       
+            }
+        }    
+    }
+
+    .footer{
+        margin-bottom: 0px;
+        width: 100%;
+        height: 170px;
+        background: $card_color;
+        margin-top: 130px;
+        position: absolute;
+        z-index: -1;
+        
+
+        .footer-wrap{
+            display: flex;
+            flex-direction: row;
+            .footer_logo{
+                width: 200px;
+                
+                margin: 100px 50px 0px 140px;
+                display: flex;
+                img{
+                    width: 30px;
+                    height: 30px;
+                }
+
+                p{
+                    margin: 3px 0 0 10px;
+                    height: 50px;
+                    font-family: $delusional;
+                    display: flex;
+                    flex-direction: column;
+                    font-weight: bold;
+                    color: #AFB3C0;
+                    line-height: 15px;
+
+                    span{
+                        font-weight: normal;
+                        font-size: 7px;
+                        text-align: center;
+                    }
+                } 
+            }
+
+            .footer_text{
+                position: relative;
+                float: right;
+                width: 200px;
+                height: 50px;
+                margin: 95px 50px 0 155px;
+                @include text(#AFB3C0, 10px, normal, normal, $delusional)
+            }
+
+            .footer-cr{
+                @extend .footer_text;
+                margin: 110px 50px 0 280px;
+                @include text(#AFB3C0, 12px, normal, normal, $delusional)
+
+
+            }
+        }
+    }
+}
+
