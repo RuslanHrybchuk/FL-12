@@ -1,0 +1,37 @@
+span {
+    font-size: 17px;
+}
+
+.folder_image {
+    color: #EDBC0B;
+}
+.file_image {
+    color: #BBBBBB;
+}
+
+.element {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
+}
+.element:hover {
+    background-color: #EFEFEF;
+}
+
+.left_Margin {
+    margin-left: 20px;
+}
+
+.left_Margin10 {
+    margin-left: 10px;
+}
+
+.hide {
+    display: none;
+}
+
+.italic {
+    font-style: italic;
+}
